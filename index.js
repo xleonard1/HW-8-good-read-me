@@ -6,7 +6,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'title',
-            message: 'What would you like to name your README?'
+            message: 'What would you like to name your README?',
         },
         {
             type: 'input',
@@ -16,28 +16,28 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'motivation',
-            message: 'what was your Motivation?'
+            message: 'what was your Motivation?',
 
         },
         {
             type: 'input',
             name: 'why',
-            message: 'why did you build this project?'
+            message: 'why did you build this project?',
         },
         {
             type: 'input',
             name: 'problems',
-            message: 'What problems does it solve?'
+            message: 'What problems does it solve?',
         },
         {
            type: 'input',
            name: 'Contents',
-           message: 'Add a table of contents to make it easy for users to find what they need'
+           message: 'Add a table of contents to make it easy for users to find what they need',
         },
         {
             type: 'input',
             name: 'installation',
-            message: 'What are the steps required to install your project?'
+            message: 'What are the steps required to install your project?',
         },
         {
             type: 'input',
@@ -47,29 +47,27 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'contribution',
-            message: 'Tell others how they should contribute'
+            message: 'Tell others how they should contribute',
         },
         {
             type: 'input',
             name: 'Tests',
-            message: 'Provide instructions on how to run your tests.'
-        }
-    ])
-}
-
-const chooseLicense = () => {
-    return inquirer.prompt([
+            message: 'Provide instructions on how to run your tests.',
+        },
         {
             type: 'checkbox',
-            name: 'noLicense',
-            choices: ['no license', 'MIT License', 'GNU GPLv3']
+            name: 'license',
+            message: 'choose a license',
+            choices: ['no license', 'MIT License', 'GNU GPLv3'],
+
         }
-    ])
-} 
+    ]);
+};
+
 
 const init = () => {
     promptUser()
-    chooseLicense
+    
 
 }
 
