@@ -1,7 +1,7 @@
 {
   "name": "hw-8-good-read-me",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Description",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,6 @@
   "homepage": "https://github.com/xleonard1/HW-8-good-read-me#readme",
   "dependencies": {
     "inquirer": "^8.2.4"
-  }
+  },
+  "devDependencies": {}
 }

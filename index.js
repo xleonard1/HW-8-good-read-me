@@ -51,24 +51,77 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'Tests',
+            name: 'tests',
             message: 'Provide instructions on how to run your tests.',
         },
         {
             type: 'checkbox',
             name: 'license',
             message: 'choose a license',
-            choices: ['no license', 'MIT License', 'GNU GPLv3'],
+            choices: [,'no license', 'MIT License', 'GNU GPLv3'],
 
-        }
+        },
     ]);
 };
+
+const generateReadMe = ({title, description, motivation, why, problems, contents, installation, usage, contribution, tests, license}) => 
+    `
+    # <${title}>
+    
+    ## Description
+    
+    ${description}
+    
+    - ${motivation}
+    - ${why}
+    - ${problems}
+    
+    
+    ## Table of Contents
+    ${contents}
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#license)
+    
+    ## Installation
+    
+   ${installation}.
+    
+    ## Usage
+    
+    ${usage}.
+    
+
+
+    
+    ## License
+    
+   ${license}.
+    
+    ---
+    
+     The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+    
+    ## Badges
+    
+    ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
+    
+    Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+    
+    ## How to Contribute
+    
+   ${contribution}.
+    
+    ## Tests
+    
+    ${tests}.`;
 
 
 const init = () => {
     promptUser()
-    
-
+    .then ((answers) => fs.writeFileSync('README.md', generateReadMe(answers)))
+    .then(() => console.log('succesfully wrote to README.md'))
+    .catch((err) => console.log(err));
 }
 
 init()
