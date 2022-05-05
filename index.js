@@ -31,9 +31,10 @@ const promptUser = () => {
             message: 'What problems does it solve?',
         },
         {
-           type: 'input',
+           type: 'checkbox',
            name: 'Contents',
-           message: 'Add a table of contents to make it easy for users to find what they need',
+           message: 'select all of the sections to be included in the table of contents to make it easy for users to find what they need',
+           choices: ['description', 'Installation', 'Usage', 'How to Contribute', 'Tests', 'Questions'],
         },
         {
             type: 'input',

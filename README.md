@@ -1,42 +1,42 @@
 
-# Read Me Generator
+# Good Read Me Generator
     
 ## Description
     
-    The ReadMe Generator allows the user to  get time back by  automatically generating a readme based on the user's input. 
+    This allows the user to spend more time coding and less time generating a good read me.
     
-    - This was inspired by the need to create an easier and more efficient way of generating a readme file. Now, more focus can be spent on the actual code and debugging.
-    - This project was built with the intention of helping the user. It was also a challenge to myself to understand node.js better.
-    - It solves the problem of time being taking away from coders who should be coding and debugging
+    - As a user, I wanted to be able to insert information and the information inserted be generated onto a readme.md file
+    - Software engineers spend too much time trying to make a good read me, when they could spend more time on coding related tasks
+    - it automatically ensures that readme has all of the necessary requirements
     
     
 ## Table of Contents
-    undefined
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
+
+  
+  
+    
 
 ## License
    This repository is licensed under: 
-   no license
-   
+   Apache
+   [![license](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
    Use the link below to gather details on the license.
-   
+   https://www.apache.org/licenses/LICENSE-2.0.txt
    
     
 ## Installation
     
-   The project runs inside of the terminal using javascript and nodeJs. The user only needs to respond to the prompts displayed in the terminal after running node index.js.
+   The user has to run an npm init and then run node index.js.
     
 ## Usage
     
-    Open terminal, run node index.js, respond to the prompts, hit enter when done with a response. The generator will do the rest. .
+    respond to the prompts.
     
     
 ## How to Contribute
     
-   Other's could make the generator also run in the front end, but provide the information from the backend..
+   Make this browser acceptable.
     
 ## Tests
     

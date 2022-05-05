@@ -90,6 +90,40 @@ function renderLicenseSection(license) {
 
 }
 
+function renderContents (Contents) {
+  let contentC = ''
+  switch(Contents) {
+    case 'description':
+      contentC += `[description](##Description)`
+      break;
+    case 'Installation': 
+      contentC += `[Installation](##Installation)`
+      break;
+    case 'Usage':
+      contentC += `[Usage](##Usage)`
+      break;
+    case 'How to Contribute':
+      contentC += `[How to Contribute](##How to Contribute)`
+      break;
+    case 'Tests':
+      contentC += `[Tests](##Tests)`
+      break;
+    case 'Questions':
+      contentC += `[Questions](##Questions)`
+      break;
+  }
+
+  return contentC;
+};
+
+function generateTBC (Contents){
+  let con = renderContents(Contents)
+  return `## Table of Contents
+
+  ${con}
+  `
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
@@ -104,11 +138,8 @@ function generateMarkdown(data) {
     - ${data.problems}
     
     
-## Table of Contents
-    ${data.contents}
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
+${generateTBC(data.Contents.answer)}
+    
 
 ${renderLicenseSection(data.license)}
     
